@@ -3,10 +3,7 @@ var builder = require('builder');
 var transporter = require('transporter');
 var guard = require('guard');
 var explorer = require('explorer');
-var distanceHarvester = require('distanceHarvester');
-var distanceTransporter = require('distanceTransporter');
 var smallTransporter = require('smallTransporter');
-var distanceBuilder = require('distanceBuilder');
 // W11N2  W12N2 W12N2
 var W11N2builderNr=[     'W11N2builder0',    'W11N2builder1']
 var W11N2transporterNr=[ 'W11N2transporter0','W11N2transporter1']
