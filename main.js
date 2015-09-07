@@ -234,9 +234,9 @@ if(Memory.turn==0){
               Game.spawns.Spawn2.createCreep([CARRY,CARRY,MOVE,MOVE,MOVE,MOVE], W12N2transporterNr[0], {role: 'transporter'} );
 
  		
- 	}else if(W12N2harvesterNr.length && allEnergy>=700 ){
+ 	}else if(W12N2harvesterNr.length && allEnergy>=900 ){
 
- 	        Game.spawns.Spawn2.createCreep( [WORK,WORK,WORK,WORK,CARRY,CARRY,CARRY,CARRY,MOVE,MOVE], W12N2harvesterNr[0], {role: 'harvester'} );
+ 	        Game.spawns.Spawn2.createCreep( [WORK,WORK,WORK,WORK,WORK,WORK,CARRY,CARRY,CARRY,CARRY,MOVE,MOVE], W12N2harvesterNr[0], {role: 'harvester'} );
 
  		
     }else if(W12N2builderNr.length && allEnergy>=700 ){
