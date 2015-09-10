@@ -232,9 +232,9 @@ if(Memory.turn==0){
     }else if(W11N2harvesterNr.length &&allEnergy>=900  ){
  	         Game.spawns.Spawn1.createCreep( [WORK,WORK,WORK,WORK,WORK,WORK,CARRY,CARRY,CARRY,CARRY,MOVE,MOVE], W11N2harvesterNr[0], {role: 'harvester'} );
  		
-    }else if(W11N2builderNr.length && allEnergy>=1400 ){
+    }else if(W11N2builderNr.length && allEnergy>=1800 ){
         
-             Game.spawns.Spawn1.createCreep( [WORK,WORK,WORK,WORK,WORK,WORK,WORK,WORK,MOVE,CARRY,CARRY,MOVE,MOVE,MOVE,MOVE,CARRY,CARRY,MOVE,MOVE,MOVE,MOVE], W11N2builderNr[0], {role: 'builder'} );
+             Game.spawns.Spawn1.createCreep( [WORK,WORK,WORK,WORK,WORK,WORK,WORK,WORK,WORK,WORK,WORK,WORK,CARRY,CARRY,CARRY,CARRY,CARRY,MOVE,MOVE,MOVE,MOVE,MOVE,MOVE,MOVE,MOVE,MOVE], W11N2builderNr[0], {role: 'builder'} );
  		
     }else if(guardNr.length && allEnergy>=1100 ){
 		Game.spawns.Spawn1.createCreep( [RANGED_ATTACK, RANGED_ATTACK,RANGED_ATTACK,RANGED_ATTACK,HEAL, TOUGH,TOUGH,TOUGH,TOUGH,TOUGH,TOUGH,TOUGH,TOUGH,TOUGH,TOUGH, MOVE,MOVE,MOVE,MOVE], guardNr[0], {role: 'guard'} );
@@ -246,18 +246,18 @@ if(Memory.turn==0){
  allEnergy=Game.spawns.Spawn2.room.energyAvailable;
  potencial=Game.spawns.Spawn2.room.energyCapacityAvailable;
  
-     if(W12N2transporterNr.length && allEnergy>=300 ){
+     if(W12N2transporterNr.length && allEnergy>=400 ){
 
-              Game.spawns.Spawn2.createCreep([CARRY,CARRY,MOVE,MOVE,MOVE,MOVE], W12N2transporterNr[0], {role: 'transporter'} );
+              Game.spawns.Spawn2.createCreep([CARRY,CARRY,CARRY,CARRY,MOVE,MOVE,MOVE,MOVE], W12N2transporterNr[0], {role: 'transporter'} );
 
  		
  	}else if(W12N2harvesterNr.length && allEnergy>=700 ){
 
- 	        Game.spawns.Spawn2.createCreep( [WORK,WORK,WORK,WORK,CARRY,CARRY,CARRY,CARRY,MOVE,MOVE], W12N2harvesterNr[0], {role: 'harvester'} );
+ 	        Game.spawns.Spawn2.createCreep( [WORK,WORK,WORK,WORK,WORK,WORK,CARRY,MOVE], W12N2harvesterNr[0], {role: 'harvester'} );
 
  		
-    }else if(W12N2builderNr.length && allEnergy>=700 ){
-             Game.spawns.Spawn2.createCreep( [WORK,WORK,WORK,WORK,WORK,CARRY,MOVE,MOVE,MOVE], W12N2builderNr[0], {role: 'builder'} );
+    }else if(W12N2builderNr.length && allEnergy>=1000 ){
+             Game.spawns.Spawn2.createCreep( [WORK,WORK,WORK,WORK,WORK,WORK,CARRY,CARRY,CARRY,CARRY,MOVE,MOVE,MOVE,MOVE], W12N2builderNr[0], {role: 'builder'} );
 
     }
     
@@ -276,13 +276,13 @@ if(Memory.turn==0){
               Game.spawns.Spawn3.createCreep([CARRY,CARRY,CARRY,CARRY,CARRY,CARRY,MOVE,MOVE,MOVE,MOVE,MOVE,MOVE], W12N3transporterNr[0], {role: 'transporter'} );
 
  		
- 	}else if(W12N3harvesterNr.length && allEnergy>=750 ){
+ 	}else if(W12N3harvesterNr.length && allEnergy>=700 ){
 
- 	        Game.spawns.Spawn3.createCreep( [WORK,WORK,WORK,WORK,WORK,WORK,CARRY,MOVE,MOVE], W12N3harvesterNr[0], {role: 'harvester'} );
+ 	        Game.spawns.Spawn3.createCreep( [WORK,WORK,WORK,WORK,WORK,WORK,CARRY,MOVE], W12N3harvesterNr[0], {role: 'harvester'} );
 
  		
-    }else if(W12N3builderNr.length && allEnergy>=1200 ){
-             Game.spawns.Spawn3.createCreep( [WORK,WORK,WORK,WORK,WORK,WORK,WORK,CARRY,CARRY,CARRY,CARRY,CARRY,CARRY,MOVE,MOVE,MOVE,MOVE], W12N3builderNr[0], {role: 'builder'} );
+    }else if(W12N3builderNr.length && allEnergy>=1500 ){
+             Game.spawns.Spawn3.createCreep( [WORK,WORK,WORK,WORK,WORK,WORK,WORK,WORK,WORK,CARRY,CARRY,CARRY,CARRY,CARRY,CARRY,MOVE,MOVE,MOVE,MOVE,MOVE,MOVE], W12N3builderNr[0], {role: 'builder'} );
 
     }
 }     

@@ -6,9 +6,10 @@ module.exports ={
     
     doWork:function (creep) {
         
-        var roadToRepair = creep.room.find(FIND_STRUCTURES, { filter: function(object){ return (object.hits < object.hitsMax && object.hits< 4000); } });
+        var roadToRepair = creep.room.find(FIND_STRUCTURES, { filter: function(object){ return (object.hits < (object.hitsMax/2) && object.hits<10000 ); } });
         var construction = creep.room.find(FIND_CONSTRUCTION_SITES);
         
+		//var objectToRepair=creep.me
 
         
         
@@ -55,7 +56,6 @@ module.exports ={
 					}
 				}
           
-        }
         
           }
 
