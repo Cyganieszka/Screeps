@@ -67,6 +67,23 @@ if(link2.energy>0 && link2.cooldown==0){
 
 
 
+//room3
+if(Game.rooms['W12N3'].memory.link1==undefined){
+Game.rooms['W12N3'].memory.link1= Game.spawns.Spawn3.room.lookForAt('structure', 14,45)[0].id;
+}
+if(Game.rooms['W12N3'].memory.link2==undefined){
+Game.rooms['W12N3'].memory.link2= Game.spawns.Spawn3.room.lookForAt('structure', 36,45)[0].id;
+}
+
+link1 =Game.getObjectById(Game.rooms['W12N3'].memory.link1);
+link2 = Game.getObjectById(Game.rooms['W12N3'].memory.link2);
+if(link1.energy>0 && link1.cooldown==0){
+    if(link2.energy<link2.energyCapacity){
+        link1.transferEnergy(link2);
+    }
+}
+
+
 for(var name in Game.creeps) {
     
 	var creep = Game.creeps[name];

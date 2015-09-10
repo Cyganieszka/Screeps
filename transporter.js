@@ -16,8 +16,7 @@ doWork:function (creep) {
 
 
     
-//   	 console.log(creep.name);
-	 
+//    console.log(creep.name);
 // 	  console.log(spawn);
 
     var storage = creep.room.storage;

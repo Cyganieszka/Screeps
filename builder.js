@@ -11,11 +11,7 @@ module.exports ={
         
 
         
-          if(creep.name.slice(0,5)=='W11N2' && creep.carry.energy == 0){
-              var    link4=Game.getObjectById(Game.rooms['W11N2'].memory.link4);
-              creep.moveTo(link4);
-              link4.transferEnergy(creep);
-          }else{
+        
             
         
         if(construction.length>0  ){
@@ -46,7 +42,18 @@ module.exports ={
                 if(creep.carry.energy > 0) {
                     creep.moveTo(creep.room.controller);
                     creep.upgradeController(creep.room.controller);
-                }
+                }else{
+					var link;
+					if(creep.name.slice(0,5)=='W11N2'){
+						link=Game.getObjectById(Game.rooms['W11N2'].memory.link4);
+						creep.moveTo(link);
+						link.transferEnergy(creep);
+					}else if(creep.name.slice(0,5)=='W12N3'){
+						link=Game.getObjectById(Game.rooms['W12N3'].memory.link2);
+						creep.moveTo(link);
+						link.transferEnergy(creep);
+					}
+				}
           
         }
         
