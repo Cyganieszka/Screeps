@@ -5,36 +5,34 @@ module.exports ={
 
     
     doWork:function (creep) {
-        
-        var roadToRepair = creep.room.find(FIND_STRUCTURES, { filter: function(object){ return (object.hits < (object.hitsMax/2) && object.hits<10000 ); } });
-        var construction = creep.room.find(FIND_CONSTRUCTION_SITES);
-        
-		//var objectToRepair=creep.me
+		
+		if(creep.memory.toRepair==undefined){
+			var roadToRepair = creep.room.find(FIND_STRUCTURES, { filter: function(object){ return (object.hits < (object.hitsMax/2) && object.hits<10000 ); } });
+			creep.memory.toRepair=roadToRepair[0];
+		}
+
+		var construction = creep.room.find(FIND_CONSTRUCTION_SITES);}
 
         
         
-            
+		var objectToRepair=creep.memory.toRepair;
+
         
-        if(construction.length>0  ){
+        if(construction.length >0  ){
 		  
 		            creep.moveTo(construction[0]);
 			        creep.build(construction[0]);
 			        
 
-		  }else if(roadToRepair.length>0  ){
+		  }else if(objectToRepair!= undefined  ){
 		      
-		       var object =roadToRepair[0];
-		        if(creep.name.slice(-1)==1){
-                   object =roadToRepair[roadToRepair.length-1];
-                   console.log(object)
-                 }
-		       
 
-
-                     if(object.hits < object.hitsMax && object.hits< 4000){
-                        creep.moveTo(object);
-                        creep.repair(object);
-                    }
+                    if(objectToRepair.hits < (objectToRepair.hitsMax/2) && objectToRepair.hits<100000 ){
+                        creep.moveTo(objectToRepair);
+                        creep.repair(objectToRepair);
+                    }else{
+						creep.memory.toRepair=undefined;
+					}
 
 
 		  }else {
