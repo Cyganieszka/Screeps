@@ -5,7 +5,7 @@ var guard = require('guard');
 var explorer = require('explorer');
 var smallTransporter = require('smallTransporter');
 // W11N2  W12N2 W12N2
-var W11N2builderNr=[     'W11N2builder0',    'W11N2builder1']
+var W11N2builderNr=[     'W11N2builder0',    'W11N2builder1','W11N2builder2','W11N2builder3']
 var W11N2transporterNr=[ 'W11N2transporter0','W11N2transporter1']
 var W11N2harvesterNr=[   'W11N2harvester0',  'W11N2harvester1']
 
