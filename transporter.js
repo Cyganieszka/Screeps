@@ -6,12 +6,8 @@ doWork:function (creep) {
     var target=0;
     var spawn=0;
     
-    if(creep.name.slice(0,5)=='W11N2'){
+    if(creep.name.slice(0,5)=='E12S1'){
         spawn=Game.spawns.Spawn1;
-    }else if(creep.name.slice(0,5)=='W12N2'){
-        spawn=Game.spawns.Spawn2;
-    }else if(creep.name.slice(0,5)=='W12N3'){
-        spawn=Game.spawns.Spawn3;
     }
 
 
